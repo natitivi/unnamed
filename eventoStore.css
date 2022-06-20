@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+}
+
+/*Línea*/
+.divisor{
+  padding: 20px;
+}
+
+/*Botón de cada tarjeta*/
+.btn:hover {
+  text-decoration: none;
+  background-color: rgb(51, 61, 202);
+  color: white;
+  font-weight: 500;
+}
+
+/*Imagen de Carrito del menú de compra*/
+.thImg {
+  width: 5px;
+}
+.imgCart {
+  width: 50px;
+}
+
+/*Formato para Íconos de Trash y Cart del menú de compra*/
+.button-m{
+  border: 0px;
+  background-color: aquamarine;
+  height: 23px;
+  width: 23px;
+}

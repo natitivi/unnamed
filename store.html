@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no', width=device-width, initial-scale=1.0">
+    <!--ícono en la barra del buscador-->
+    <link rel="shortcut icon" href="./img/faviconUnnamed.png">
+    <!--Mi CSS-->
+    <link rel="stylesheet" href="./estilo.css">
+    <link rel="stylesheet" href="./eventoStore.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!--Libreria-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <!--Título de la página-->
+    <title>Unnamed - Store</title>
+</head>
+
+<body>
+    <!--Cabecera de Ecommerce-->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./index.html"> <img src="./img/nombre.jpg" alt="Logo Unnamed"></a>
+          <button id="menuButton" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="./store.html">Store</a>
+                </li>
+            </ul>
+                <form class="d-flex" role="search">
+                    <input id="inputText" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" id="buscador" type="submit">Search</button>
+                </form>
+          </div>
+        </div>
+    </nav>
+
+    <!--Cuerpo de Ecommerce-->
+    <!--Encabezado de página-->
+    <div class="tituloSeccion">PRODUCTS</div>
+
+    <!--Contenedor de tarjetas-->
+    <div class="container m-auto">
+        <div class="row" id="cards"></div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody id="items"></tbody>
+                <tfoot>
+                    <tr id="footer"></tr>
+                    <tr></tr>
+                </tfoot>
+            </table>
+    </div>
+
+    <!-- Pie de Carrito -->
+    <template id="contenedor-footer">
+        <th scope="row" colspan="2">Total</th>
+            <td></td>
+            <td>
+                <button class="button-m m-1" id="vaciar-carrito">
+                    <ion-icon name="trash-outline" class="">Delete</ion-icon>
+                </button>
+            </td>
+            <td class="font-weight-bold">US$<span>Price</span></td>
+                <tr>
+                    <td>
+                        <a>
+                            <button type="button" class="button-m m-1" id="finalizar">
+                                <ion-icon name="cart"></ion-icon>
+                            </button>
+                        </a>
+                    </td>
+                </tr>
+            </td>
+    </template>
+
+    <!-- Carrito -->
+    <template id="contenedor-carrito">
+        <tr>
+            <th class="thImg m-auto" scope="col"><img src="img/shopping-cart.png" class="imgCart" alt="" srcset="">
+            </th>
+            <td>Producto</td>
+            <td>Cantidad</td>
+            <td>
+                <button class=" btn btn-sumar ">
+                    +
+                </button>
+                <button class="btn  btn-quitar">
+                    -
+                </button>
+            </td>
+            <td>$ <span></span></td>
+        </tr>
+    </template>
+
+    <!-- Tarjetas -->
+    <template id="contenedor-card">
+        <div class="col-12 mb-2 col-md-4">
+            <div class="card">
+                <img src="" alt="" class="card-img-top">
+                <div class="card-body">
+                    <h5>Titulo</h5>
+                    <h6>Detalle</h6>
+                    <p>$.<span>Precio</span></p>
+                    <button class="btn btn-dark">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!--Pie de website-->
+    <footer>
+        <div class="contenedor-pie">
+            <div class="parte3">
+                <h4> Find us:</h4>
+                <img class="homeImageRedes" src="./img/iconFB.png" alt="social media logo facebook">
+                <img class="homeImageRedes" src="./img/iconInstagram.png" alt="social media logo instagram">
+                <img class="homeImageRedes" src="./img/iconPinterest.png" alt="social media logo pinterest">
+            </div>
+        </div>
+        <div class="contenedor-barra">
+            <div class="parte4">
+                <p class="texto"> Unnamed Brand, 2022 </p>
+            </div>
+        </div>
+    </footer>
+
+    <!--Scripts alojados-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!--SweetAlert-->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--Scripts propios-->
+    <script src="storeCarrito.js"></script>
+
+</body>
+
+</html>
